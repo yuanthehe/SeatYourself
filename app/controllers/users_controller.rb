@@ -9,7 +9,6 @@ class UsersController < ApplicationController
       redirect_to restaurants_url, notice: "Signed up!"
     else
       render "new"
-    end
   end
 
   def show
@@ -33,7 +32,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to restaraunts_url
+    redirect_to restaurants_url
   end
 
 private

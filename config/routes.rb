@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'session/new'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
+  get 'new/create'
+
+  get 'new/destroy'
+
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :owners, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :restaurants

@@ -6,9 +6,9 @@ class UserController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to restaraunts_url, notice: "Signed up!"
+      redirect_to restaurants_url, notice: "Signed up!"
     else
-      render "new"
+      render :new
     end
   end
 
@@ -33,7 +33,7 @@ class UserController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to restaraunts_url
+    redirect_to restaurants_url
   end
 
 private

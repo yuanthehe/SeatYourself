@@ -32,7 +32,7 @@ class ReservationController < ApplicationController
   def update
     @reservation = Reservation.find(params[:id])
 
-    if @reservation.update_attributes(product_params)
+    if @reservation.update_attributes(reservation_params)
       redirect_to restaurants_url(@reservation)
     else
       render :edit
@@ -47,6 +47,6 @@ class ReservationController < ApplicationController
 
   private
   def reservation_params
-    params.require(:product).permit(:name, :description, :price_in_cents)
+    params.require(:reservation).permit(:restaurant_id, :user_id, :size, :when)
   end
 end

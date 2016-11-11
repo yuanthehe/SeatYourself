@@ -20,7 +20,7 @@ class ReservationController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(product_params)
+    @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
       redirect_to restaurants_url

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # root '/'
+
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :owners, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :restaurants, only: [:new, :create, :show, :edit, :update, :destroy]
@@ -27,6 +29,8 @@ Rails.application.routes.draw do
 
   resources :reservations do
     resources :restaurants, only: [:new, :create, :edit, :update, :destroy]
-end
+  end
+
+
 
 end

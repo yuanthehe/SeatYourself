@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SeatYourself</title>
+  </head>
+  <body>
+    <h1>Welcome<%= @user.name %>!</h1>
+    <p><%= link_to "Home", restaurants_path %></p>
+    <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
+
+    <h3>Reviews</h3>
+
+<% if current_user %>
+<% end %>
+  </body>
+</html>

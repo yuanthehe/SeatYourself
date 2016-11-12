@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       redirect_to restaurants_url, notice: "Signed up!"
     else
       render "new"
+    end
   end
 
   def show

@@ -28,7 +28,6 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-
     if
       @restaurant.update_attributes(restaurant_params)
       redirect_to restaurant_url
@@ -41,7 +40,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @restaurant.delete
     redirect_to restaurants_url
-end
+  end
 
   def search(search_term)
     results = []
@@ -58,5 +57,5 @@ end
 
   def restaurant_params
     params.require(:restaurant).permit(:name, :capacity, :food_type, :location, :phone)
-
+  end
 end

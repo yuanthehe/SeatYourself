@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Restaurant <%= @restaurant.name %></h1>
 
 <p><h4>All Reviews</h4><br>
@@ -44,3 +45,63 @@
             <% else %>
               <p>Please <%= link_to "log in", new_sessions_path %> to add a review.</p>
       <% end %>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SeatYourself</title>
+  </head>
+  <body>
+    <h1><%= @restaurant.name %></h1>
+    <%= link_to "Home", restaurants_path %>
+      <p><%= @restaurant.food_type %></p>
+      <p><%= @restaurant.location %></p>
+      <p><%= @restaurant.phone %></p>
+      <p><%= @restaurant.description %></p>
+        <h3>Reviews</h3>
+
+       <p>Reviews for <%= @restaurant.name %></p>
+
+        <% @restaurant.reviews.each do |review| %>
+       <p>
+         <%= review.content %>
+       <br>
+          <% if review.user != nil %>
+           <em> by <%= review.user.email %></em>
+            Added on: <%= review.created_at %>
+           <% end %>
+       </p>
+        <% end %>
+
+  <% if current_user %>
+  <h4>New Review</h4>
+
+  <%= form_for([@restaurant, @review]) do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :comment %><br />
+      <%= f.text_area :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% else %>
+  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
+<% end %>
+  </body>
+</html>
+>>>>>>> master

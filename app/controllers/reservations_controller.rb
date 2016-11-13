@@ -1,13 +1,13 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.where (:owner_id = @owner_id)
   end
 
   def show
     @reservation = Reservation.find(params[:id])
 
     if current_user
-      @review = @reservation.reviews.build
+      @reservation = @reservation.reviews.build
     end
   end
 
@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
-      redirect_to restaurants_url
+      redirect_to restaurants_url(@restaurant)
     else
       render :new
     end

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<h1>List of all Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+    <p><%= restaurant.name %><br>
+    <%= restaurant.location %>, <%= restaurant.phone %><br>
+    <%= restaurant.description %>, <%= restaurant.food_type %><br>
+    <%= restaurant.capacity %><br>
+    <p><%= link_to "Click to view", restaurants_path %></p>
+  <% end %>
+=======
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,3 +28,4 @@
 
   </body>
 </html>
+>>>>>>> master

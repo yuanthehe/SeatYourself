@@ -1,6 +1,13 @@
 class ReviewsController < ApplicationController
+<<<<<<< HEAD
+
+  before_action :load_restaurant
+
+
+=======
   before_action :ensure_logged_in, only: [:create, :destroy]
   
+>>>>>>> master
   def new
     @review = Review.new
   end

@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+
+  before_action :load_restaurant
+
+
   def new
     @review = Review.new
   end

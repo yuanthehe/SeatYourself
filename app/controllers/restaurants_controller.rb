@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-    @restaurant = Restaurant.all
+    @restaurants = Restaurant.all
   end
 
   def create
@@ -28,9 +28,8 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-    if
-      @restaurant.update_attributes(restaurant_params)
-      redirect_to restaurant_url
+    if @restaurant.update_attributes(restaurant_params)
+       redirect_to restaurant_url
     else
       render :edit
     end
@@ -46,7 +45,7 @@ class RestaurantsController < ApplicationController
     results = []
     @restaurant.each do |r|
       if search_term == r.food_type || search_term == r.name
-        results << r
+         results << r
       end
         return results
       end
@@ -56,6 +55,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :capacity, :food_type, :location, :phone)
+    params.require(:restaurant).permit(:name, :capacity, :food_type, :location, :phone, :description)
   end
 end

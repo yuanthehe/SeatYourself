@@ -13,17 +13,22 @@ header h1 {
   padding: 30px;
 }
 
+nav {
+  background-color: green;
+}
+
 nav a {
   text-decoration: none;
   display: inline;
   color: navy;
 }
 
-.log {
+.log p {
   color: navy;
   float: right;
   margin-right: 10px;
   margin-top: 10px;
+  text-decoration: none;
 
 }
 
@@ -129,4 +134,8 @@ div.user_reviews_display {
   background-color: white;
   border-radius: 5px;
 
+}
+
+.restaurants {
+  border: 10px solid black;
 }

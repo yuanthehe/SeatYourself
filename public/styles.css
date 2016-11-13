@@ -2,10 +2,15 @@
   font-family: georgia, serif;
 }
 
+header {
+  background-color: white;
+
+}
+
 header h1 {
-  margin-left: 0.5em;
-  margin-top: 0.5em;
   color: navy;
+  margin: 0px;
+  padding: 30px;
 }
 
 nav a {
@@ -17,6 +22,9 @@ nav a {
 .log {
   color: navy;
   float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+
 }
 
 .signup,
@@ -24,20 +32,29 @@ nav a {
   text-decoration: none;
 }
 
-.home_image_block {
+body {
   background-image: url(http://previews.123rf.com/images/gstockstudio/gstockstudio1510/gstockstudio151000082/45974538-Friends-having-dinner-Top-view-of-four-people-having-dinner-together-while-sitting-at-the-rustic-woo-Stock-Photo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top 50px;
+  background-position: center;
   height: 30em;
   width: 100%;
   z-index: -1;
+  margin: 0px;
 
 }
 
-form.search_bar {
+.search_bar {
+  display: block;
+  text-align: center;
+}
+
+.search_bar form{
   margin: auto;
   padding: 125px;
+  padding-top: 140px;
+  display: inline-block;
+  width: 40%;
 }
 
 .search_bar input {
@@ -49,5 +66,19 @@ form.search_bar {
 }
 
 button.search_button {
-  height: 10%;
+  height: 3em;
+  border: 5px solid green;
+  border-radius: 5px;
+}
+
+img.profile_pic {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.user_profile {
+  background-color: white;
 }

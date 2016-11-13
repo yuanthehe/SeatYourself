@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>SeatYourself</title>
-  </head>
-  <body>
-    <h1>Welcome<%= @user.name %>!</h1>
-    <p><%= link_to "Home", restaurants_path %></p>
+<div class="user_profile">
+  <h1>Welcome <%= @user.name %>!</h1>
+  <img class="profile_pic" src="http://settingforone.com/wp-content/uploads/2015/02/Dollarphotoclub_66082123.jpg">
+  <div class="user_info">
+    <p>User: <%= @user.name %></p>
+    <p>Email: <%= @user.email %></p>
+    <p>Phone: <%= @user.phone %></p>
     <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
+  </div>
 
-    <h3>Reviews</h3>
 
-<% if current_user %>
-<% end %>
-  </body>
-</html>
+  <div class="active_reservations">
+    <h2>Upcoming Reservations</h2>
+      <div class="reservations_table">
+      </div>
+  </div>
+
+
+  <h3>Reviews</h3>
+
+  <% if current_user %>
+  <% end %>
+</div>

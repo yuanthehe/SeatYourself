@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Seatyourself</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Seat Yourself</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="log">
+      <a href='' class="login">Login</a> | <a href='' class="signup">Sign Up</a>
+    </div>
+    <h1>Seat Yourself</h1>
+      <nav>
+        <a href='/'>Home</a>
+        <a href= '/restaurants'>Restaurants</a>
+      </nav>
+  </header>
+  <%= yield %>
+</body>
 </html>

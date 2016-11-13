@@ -4,14 +4,48 @@
     <meta charset="utf-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <title>Seat Yourself</title>
     <%= csrf_meta_tags %>
   </head>
+=======
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+  </head>
+
+<<<<<<< HEAD
+  <header class="top-header">
+    <body>
+      <h1 class = "logo"><a href="/home">Seat<br>Your<br>self</a></h1>
+
+      <nav class="nav primary-nav">
+        <ul>
+          <li> Email <a href="info@seatyourself.compiled?subject=Reaching%20Out&body=How%20are%20you"></a></li>
+          <li> Call for Reservation </li>
+        <div class="btn-property">
+          <li><%= link_to "Sign in", restaurants_path %></li>
+          <li><%= link_to "Log in", new_sessions_path %></li>
+        </div>
+          <% end %>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search_bar container">
+    <h2> Search by Food Type or Name </h2>
+    <p> Easy search feature allows you to narrow down your choice</p>
+
+  </section>
+
+    <%= yield %>
+=======
+>>>>>>> e9d5d82bb34e632ec17e0aba7290700d4f6933df
   <body>
     <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
+<<<<<<< HEAD
     <% if flash[:alert] %>
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
@@ -30,5 +64,8 @@
         </nav>
     </header>
     <%= yield %>
+=======
+>>>>>>> master
+>>>>>>> e9d5d82bb34e632ec17e0aba7290700d4f6933df
   </body>
 </html>

@@ -8,5 +8,5 @@
 m1 = Restaurant.create([{name: 'Pizza Hut' }, {capacity: 30 }, {location: 'Yonge & Lawrence' }, {phone: '(416)789-5577' }, {food_type: 'Fast Food' }])
 m2 = Restaurant.create([{name: "Gino's" }, {capacity: 20 }, {location: 'Avenue & Eglinton'}, {phone: '(647)572-6472' }, {food_type: 'Italian'}])
 m3 = Restaurant.create([{name: 'Sacre Bleu' }, {capacity: 32 }, {location: 'Yorkville' }, {phone: '(416)443-5627' }, {food_type: 'French'}])
-r1 = Review.create([{user_id: 1}, {restaurant_id: 1}, {content: "Smells like cheese and burnt cockroaches! Don't come here. The food tastes like cardboard."}])
+r1 = Review.create([{user_id: 1}, {restaurant_id: 1}, {content: "Smells like cockroaches and the pizza tastes like cardboard. Chef Antoiné should be ashamed of himself."}])
 u1 = User.create([{name: "Donald Trump"}, {email: "thedonald@email.com"}, {password: "test"}, {password_confirmation: "test"}])

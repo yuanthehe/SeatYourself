@@ -6,11 +6,16 @@
     <title>SeatYourself</title>
   </head>
   <body>
+<<<<<<< HEAD
+    <h1>Welcome<%= @user.name %>!</h1>
+    <p><%= link_to "Home", restaurants_path %> | <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
+=======
     <h1>Welcome <%= @user.name %>!</h1>
     <p><%= link_to "Home", restaurants_path %></p>
     <p><%= link_to "Update Settings", "/users/#{@user.id}/edit" %></p>
 
     <h3><%= @user.name %>'s Reviews</h3>
+>>>>>>> master
 
     <p>Reviews for <%= @user.name %></p>
        <% @user.reviews.each do |review| %>

@@ -1,3 +1,51 @@
+<<<<<<< HEAD
+<h1>Restaurant <%= @restaurant.name %></h1>
+
+<p><h4>All Reviews</h4><br>
+  <%= @restaurant.description %><br>
+  <%= @restaurant.food_type %><br></p>
+  <%= image_tag @restaurant.url %>
+  <% end %>
+
+  <p>
+    <% @review.comment %><br>
+      <% if review.user != nil %>
+      <em> by <%= review.user.name %></em>
+      Added on: <%= review.created_at %>
+      <% end %>
+    </p>
+    <% end %>
+
+    <% if current_user %>
+      <h4>Post your review<h4>
+
+        <%= form_for([@restaurant, @review]) do |f| %>
+          <% if @review.errors.any? %>
+            <div class="error_expectation">
+              <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+              <ul>
+                <% @review.errors.full_messages.each do |msg| %>
+                  <li> <%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+            <div class="field">
+              <%= f.label :comment %><br>
+              <%= f.text_are :comment %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %>
+
+            <% else %>
+              <p>Please <%= link_to "log in", new_sessions_path %> to add a review.</p>
+      <% end %>
+=======
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,3 +104,4 @@
 <% end %>
   </body>
 </html>
+>>>>>>> master

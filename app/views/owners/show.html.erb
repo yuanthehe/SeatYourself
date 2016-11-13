@@ -1,0 +1,22 @@
+<h1>Welcome<%= @owner %>!</h1>
+<p><%= link_to "Home", restaurants_path %></p>
+<p><%= link_to "Edit Your Profile", "/owners/#{:owner_id}/edit" %></p>
+<p><%= link_to "Edit Your Restaurants", "owners/#{:owner_id}/restaurants/#{:id}/edit" %></p>
+
+
+<h3>Owned Restaurants</h3>
+<% @restaurants.each do |restaurant| %>
+  <div class="table">
+    <h3><%= link_to restaurant.name, restaurant_path(restaurant)%></h3>
+    <%= "Resevations for tonight :" %>
+    <% @reservations.each do |reservation| %>
+     reservation = Reservation.show(@ownder_id)
+     <% end %>
+  </div>
+<% end %>
+
+
+<% if current_user %>
+<% end %>
+</body>
+</html>

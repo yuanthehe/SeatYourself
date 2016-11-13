@@ -10,5 +10,7 @@ m2 = Restaurant.create([{name: "Gino's" }, {capacity: 20 }, {location: 'Avenue &
 m3 = Restaurant.create([{name: 'Sacre Bleu' }, {capacity: 32 }, {location: 'Yorkville' }, {phone: '(416)443-5627' }, {food_type: 'French'}])
 r1 = Review.create([{user_id: 1}, {restaurant_id: 1}, {content: "Smells like cockroaches and the pizza tastes like cardboard."}])
 r2 = Review.create([{user_id: 2}, {restaurant_id: 2}, {content: "Chef Antoiné should be ashamed of himself."}])
+r3 = Review.create([{user_id: 3}, {restaurant_id: 3}, {content: "Tastes muy bueno!"}])
 u1 = User.create([{name: "Donald Trump"}, {email: "thedonald@email.com"}, {password: "test"}, {password_confirmation: "test"}])
 u2 = User.create([{name: "Sam Ronaldi"}, {email: "negativesam12@email.com"}, {password: "test"}, {password_confirmation: "test"}])
+u3 = User.create([{name: Tony Schiavoné}, {email: "tonywcw@gmail.com"}, {password: "test"}, {password_confirmation: "test"}])

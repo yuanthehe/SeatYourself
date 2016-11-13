@@ -17,7 +17,7 @@
 
         <% @restaurant.reviews.each do |review| %>
        <p>
-         <%= review.comment %>
+         <%= review.content %>
        <br>
           <% if review.user != nil %>
            <em> by <%= review.user.email %></em>
@@ -30,7 +30,7 @@
   <h4>New Review</h4>
 
   <%= form_for([@restaurant, @review]) do |f| %>
-    <% if f.errors.any? %>
+    <% if @review.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 

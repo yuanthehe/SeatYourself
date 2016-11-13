@@ -13,12 +13,18 @@
   <div class="active_reservations">
     <h2>Upcoming Reservations</h2>
       <div class="reservations_table">
+        <% @user.reservations.each do |r| %>
+        <p><%= r %></p>
+        <% end %>
+        <p>Reservations go here</p>
       </div>
   </div>
 
-
+  <div class="user_reviews">
   <h3>Reviews</h3>
+    <div class="user_reviews_display">
+      <p>User reviews go here</p>
+    </div>
 
   <% if current_user %>
   <% end %>
-</div>

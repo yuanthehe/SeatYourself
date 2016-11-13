@@ -6,7 +6,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
-      redirect_to restaurants_url, notice: "You are now signed up to Seat Your Self!"
+      redirect_to "/owners/:id", notice: "You are now signed up to Seat Your Self!"
     else
       render "new"
   end

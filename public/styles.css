@@ -1,0 +1,132 @@
+* {
+  font-family: georgia, serif;
+}
+
+header {
+  background-color: white;
+
+}
+
+header h1 {
+  color: navy;
+  margin: 0px;
+  padding: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline;
+  color: navy;
+}
+
+.log {
+  color: navy;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+
+}
+
+.signup,
+.login {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(http://previews.123rf.com/images/gstockstudio/gstockstudio1510/gstockstudio151000082/45974538-Friends-having-dinner-Top-view-of-four-people-having-dinner-together-while-sitting-at-the-rustic-woo-Stock-Photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  height: 30em;
+  width: 100%;
+  z-index: -2;
+  margin: 0px;
+
+}
+
+.search_bar {
+  display: block;
+  text-align: center;
+}
+
+.search_bar form{
+  margin: auto;
+  padding: 125px;
+  padding-top: 140px;
+  display: inline-block;
+  width: 40%;
+}
+
+.search_bar input {
+  width: 60%;
+  height: 10%;
+  font-size: large;
+  border-radius: 5px;
+  border: 5px solid navy;
+}
+
+button.search_button {
+  height: 3em;
+  border: 5px solid green;
+  border-radius: 5px;
+}
+
+div#transparent_box {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1;
+  position: fixed;
+}
+
+.user_profile h1 {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+img.profile_pic {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 5px;
+  float: left;
+  margin-left: 35%;
+}
+
+div.user_info {
+  clear: right;
+  padding-left: 10px;
+}
+
+div.active_reservations {
+  clear: both;
+  display: block;
+  text-align: center;
+  padding-top: 25px;
+}
+
+div.reservations_table {
+  display: inline-block;
+  width: 40%;
+  border: 5px solid navy;
+  background-color: white;
+  border-radius: 5px;
+}
+
+div.user_reviews {
+  display: block;
+  text-align: center;
+}
+
+div.user_reviews h3 {
+  text-align: center;
+}
+
+div.user_reviews_display {
+  display: inline-block;
+  width: 80%;
+  border: 5px solid navy;
+  background-color: white;
+  border-radius: 5px;
+
+}

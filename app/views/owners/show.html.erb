@@ -1,2 +1,22 @@
-<h1>Owner#show</h1>
-<p>Find me in app/views/owner/show.html.erb</p>
+<h1>Welcome<%= @owner %>!</h1>
+<p><%= link_to "Home", restaurants_path %></p>
+<p><%= link_to "Edit Your Profile", "/owners/.id/edit" %></p>
+<p><%= link_to "Edit Your Restaurants", edit_retaurant_url(restaurant.where(:owner_id == @owner_id)) %></p>
+
+
+<h3>Owned Restaurants</h3>
+<% @restaurants.each do |restaurant| %>
+  <div class="table">
+    <h3><%= link_to restaurant.name, restaurant_path(restaurant)%></h3>
+    <%= "Resevations for tonight :" %>
+    <% @reservations.each do |reservation| %>
+     reservation = Reservation.show(@ownder_id)
+     <% end %>
+  </div>
+<% end %>
+
+
+<% if current_user %>
+<% end %>
+</body>
+</html>

@@ -11,4 +11,4 @@ m3 = Restaurant.create([{name: 'Sacre Bleu' }, {capacity: 32 }, {location: 'York
 r1 = Review.create([{user_id: 1}, {restaurant_id: 1}, {content: "Smells like cockroaches and the pizza tastes like cardboard."}])
 r2 = Review.create([{user_id: 2}, {restaurant_id: 2}, {content: "Chef Antoiné should be ashamed of himself."}])
 u1 = User.create([{name: "Donald Trump"}, {email: "thedonald@email.com"}, {password: "test"}, {password_confirmation: "test"}])
-u2 = User.create([{name: "Sam Ronaldi"}, {email: "negativesam@email.com"}, {password: "test"}, {password_confirmation: "test"}])
+u2 = User.create([{name: "Sam Ronaldi"}, {email: "negativesam12@email.com"}, {password: "test"}, {password_confirmation: "test"}])

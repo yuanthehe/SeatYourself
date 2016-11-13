@@ -39,7 +39,7 @@ body {
   background-position: center;
   height: 30em;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
   margin: 0px;
 
 }
@@ -71,14 +71,20 @@ button.search_button {
   border-radius: 5px;
 }
 
+#transparent_box {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1;
+  position: fixed;
+
+}
+
 img.profile_pic {
   max-width: 200px;
   max-height: 200px;
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
-}
-
-div.user_profile {
-  background-color: white;
 }

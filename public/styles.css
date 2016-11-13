@@ -1,0 +1,53 @@
+* {
+  font-family: georgia, serif;
+}
+
+header h1 {
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  color: navy;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline;
+  color: navy;
+}
+
+.log {
+  color: navy;
+  float: right;
+}
+
+.signup,
+.login {
+  text-decoration: none;
+}
+
+.home_image_block {
+  background-image: url(http://previews.123rf.com/images/gstockstudio/gstockstudio1510/gstockstudio151000082/45974538-Friends-having-dinner-Top-view-of-four-people-having-dinner-together-while-sitting-at-the-rustic-woo-Stock-Photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 50px;
+  height: 30em;
+  width: 100%;
+  z-index: -1;
+
+}
+
+form.search_bar {
+  margin: auto;
+  padding: 125px;
+}
+
+.search_bar input {
+  width: 60%;
+  height: 10%;
+  font-size: large;
+  border-radius: 5px;
+  border: 5px solid navy;
+}
+
+button.search_button {
+  height: 10%;
+}

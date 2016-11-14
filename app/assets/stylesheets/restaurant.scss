@@ -1,3 +1,14 @@
 // Place all the styles related to the restaurant controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.restaurant_header {
+  margin-bottom: 10px;
+  padding-left: 40px;
+  color: white;
+  text-shadow: 2px 2px #94180A;
+}
+
+div.restaurants_list {
+  width: 60%;
+}

@@ -2,40 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Seat Yourself</title>
-    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <title>Seat Yourself</title>
+    <%= csrf_meta_tags %>
   </head>
+
   <body>
-  <header>
-    <div class="log">
-      <a href='' class="login">Login</a> | <a href='' class="signup">Sign Up</a>
-    </div>
-    <h1>Seat Yourself</h1>
-      <nav>
-        <a href='/'>Home</a>
-        <a href= '/restaurants'>Restaurants</a>
-        <% if current_user %>
-        <%= link_to "Profile", "/users/#{session[:user_id]}" %>
-        <% end %>
-      </nav>
-  </header>
-
-  <% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-  <% end %>
-  <% if flash[:alert] %>
-    <p id="alert"><%= flash[:alert] %></p>
-  <% end %>
-
-  <%= yield %>
-  <p class="userinfo">
-    <% if current_user %>
-    Signed in as <%= current_user.email %>. <%= link_to "Log Out", session_path("current"), :method => :delete %>
-    <% else %>
-    <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+    <% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
     <% end %>
-</body>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
+    <header>
+        <% if current_user %>
+          Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        <% else %>
+          <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
+        <% end %>
+      </div>
+
+      <div class="logo_style">
+      <a href="/"><%= image_tag "seatyourself_logo.png", :class => "logo" %></a>
+      </div>
+
+        <a class = "nav_item" href='/restaurants'>Restaurants</a>
+
+
+      <div class="white_bar"></div>
+
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="open_space"></div>
+    </footer>
+  </body>
 </html>

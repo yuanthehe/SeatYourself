@@ -4,7 +4,7 @@
 
  <% @restaurant.reviews.each do |review| %>
    <p>
-     <%= review.comment %>
+     <%= review.content %>
      <br>
      <% if review.user != nil %>
        <em> by <%= review.user.email %></em>

@@ -1,5 +1,8 @@
 <div class="search_bar">
-  <form><input type="text" placeholder="What would you like to eat?" required>
-  <button type="Submit" class="search_button">Search</button>
-  </form>
+  <%= form_tag(restaurants_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+  <%= submit_tag "Search" %>
+  <% end %>
 </div>
+
+  

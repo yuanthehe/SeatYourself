@@ -1,14 +1,9 @@
 class ReservationsController < ApplicationController
-  def index
-    @reservations = Reservation.where (:owner_id = @owner_id)
-  end
+  before_action :ensure_logged_in, only: [:create, :edit, :destroy]
+  before_action :load_restaurant
 
   def show
     @reservation = Reservation.find(params[:id])
-
-    if current_user
-      @reservation = @reservation.reviews.build
-    end
   end
 
   def new
@@ -20,20 +15,20 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @reservation = @restaurant.reservations.build(reservation_params)
+    @reservation.user = current_user
 
     if @reservation.save
-      redirect_to restaurants_url(@restaurant)
+      redirect_to restaurant_url(@restaurant), notice: 'Reservation created successfully'
     else
-      render :new
+      render 'restaurants/show'
     end
   end
-
   def update
     @reservation = Reservation.find(params[:id])
 
     if @reservation.update_attributes(reservation_params)
-      redirect_to restaurants_url(@reservation)
+      redirect_to restaurant_url
     else
       render :edit
     end
@@ -46,6 +41,10 @@ class ReservationsController < ApplicationController
   end
 
   private
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
   def reservation_params
     params.require(:reservation).permit(:restaurant_id, :user_id, :size, :when)
   end

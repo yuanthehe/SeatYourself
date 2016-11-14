@@ -1,28 +1,24 @@
 class ReviewsController < ApplicationController
-<<<<<<< HEAD
-
   before_action :load_restaurant
-
-
-=======
   before_action :ensure_logged_in, only: [:create, :destroy]
   
->>>>>>> master
   def new
     @review = Review.new
   end
 
   def create
-    @review = Review.new
+    @review = @restaurant.reviews.build(review_params)
+    @review.user = current_user
+
     if @review.save
-      redirect_to restaurant_url
+      redirect_to restaurant_url(@restaurant), notice: 'Review created successfully'
     else
-      redirect_to restaurant_url
+      render 'restaurants/show'
     end
   end
 
   def show
-    @review = Review.find(params[:user_id, :restaurant_id])
+    @review = Review.find(params[:id])
   end
 
   def edit
@@ -32,8 +28,18 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:user_id, :restaurant_id])
+    @review = Review.find(params[:id])
     @review.delete
     redirect_to restaurant_url
   end
+
+private
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
+  def review_params
+    params.require(:review).permit(:user_id, :restaurant_id, :content)
+  end
+
 end

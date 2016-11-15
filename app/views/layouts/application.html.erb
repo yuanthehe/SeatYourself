@@ -19,21 +19,21 @@
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
     <header>
-        <% if current_user %>
-          Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-        <% else %>
-          <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
-        <% end %>
-      </div>
+      <% if current_user %>
+        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+      <% else %>
+        <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
+      <% end %>
+
+      <a class = "nav_item" href='/restaurants'>Restaurants</a>
+      <% if current_user %>
+      <%= link_to "Profile", "/users/#{session[:user_id]}" %>
+      <% end %>
+
 
       <div class="logo_style">
-      <a href="/"><%= image_tag "seatyourself_logo.png", :class => "logo" %></a>
+      <a href="/"><%= image_tag "seatyourself.png", :class => "logo" %></a>
       </div>
-
-        <a class = "nav_item" href='/restaurants'>Restaurants</a>
-        <% if current_user %>
-        <%= link_to "Profile", "/users/#{session[:user_id]}" %>
-        <% end %>
 
 
       <div class="white_bar"></div>

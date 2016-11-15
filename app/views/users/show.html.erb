@@ -18,11 +18,13 @@
           <% @user.reservations.each do |reservation| %>
           <p><%= reservation %></p>
             <% if reservation.user != nil %>
-            <em> by <%= reservation.when %></em>
-            Added on: <%= reservation.size %>
+            <em> for: <%= reservation.when %></em><br><br>
+            Size: <%= reservation.size %>
             <% end %>
           <% end %>
-          <p>No Reservations Yet!</p>
+          <p>-----</p>
+
+
         </div>
       </div>
 
@@ -32,12 +34,12 @@
           <% @user.reviews.each do |review| %>
           <p><%= review.content %><br>
             <% if review.user != nil %>
-            <em> by <%= review.user.email %></em>
+            <em><br> by <%= review.user.email %></em><br><br>
             Added on: <%= review.created_at %>
             <% end %>
           </p>
           <% end %>
-          <p>No Reviews Yet!</p>
+          <p>-----</p>
         </div>
 
   </body>

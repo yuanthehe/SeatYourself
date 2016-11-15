@@ -16,7 +16,7 @@
         <h2>Upcoming Reservations</h2>
         <div class="reservations_table">
           <% @user.reservations.each do |reservation| %>
-          <p><%= reservation %></p>
+          <p><%= reservation.restaurant.name %></p>
             <% if reservation.user != nil %>
             <em> for: <%= reservation.when %></em><br><br>
             Size: <%= reservation.size %>

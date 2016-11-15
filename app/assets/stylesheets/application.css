@@ -19,7 +19,7 @@
   }
 
   header {
-    background-color: black;
+    background-color: #323232;
 
   }
 
@@ -89,7 +89,7 @@
   }
 
   body {
-    background-image: url(http://previews.123rf.com/images/gstockstudio/gstockstudio1510/gstockstudio151000082/45974538-Friends-having-dinner-Top-view-of-four-people-having-dinner-together-while-sitting-at-the-rustic-woo-Stock-Photo.jpg);
+    background-image: url(tablefood.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     /*background-position: fixed;*/
@@ -99,6 +99,7 @@
     margin: 0px;
     background-color: black;
     line-height: 1;
+    background-attachment: fixed;
 
   }
 

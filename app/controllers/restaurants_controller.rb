@@ -5,12 +5,12 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+
     if params[:search]
       @restaurants = Restaurant.search(params[:search]).order("name ASC")
     else
-      @restaurants = Restaurant.all
+      redirect_to root_path
     end
-
   end
 
   def create

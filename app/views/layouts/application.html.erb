@@ -31,6 +31,9 @@
       </div>
 
         <a class = "nav_item" href='/restaurants'>Restaurants</a>
+        <% if current_user %>
+        <%= link_to "Profile", "/users/#{session[:user_id]}" %>
+        <% end %>
 
 
       <div class="white_bar"></div>

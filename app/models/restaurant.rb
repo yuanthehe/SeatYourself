@@ -9,7 +9,7 @@ class Restaurant < ApplicationRecord
   belongs_to :owner
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%") #|| where("food_type ILIKE ?", "%#{search}%" )
+    where("name ILIKE ? OR food_type ILIKE ?", "%#{search}%", "%#{search}%")
   end
 
 end

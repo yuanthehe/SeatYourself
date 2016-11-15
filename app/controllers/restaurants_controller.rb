@@ -4,13 +4,11 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-    @restaurants = Restaurant.all
-    if params[:search]
+    if params[:search].present?
       @restaurants = Restaurant.search(params[:search]).order("name ASC")
     else
       @restaurants = Restaurant.all
     end
-
   end
 
   def create

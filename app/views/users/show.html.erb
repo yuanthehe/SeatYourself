@@ -14,10 +14,11 @@
     <h2>Upcoming Reservations</h2>
     <div class="reservations_table">
       <% @user.reservations.each do |reservation| %>
-      <p><%= reservation.restaurant.name %></p>
-      <% if reservation.user != nil %>
-        <em> by <%= reservation.when %></em>
-        Added on: <%= reservation.size %>
+      <div class="display"><%= reservation.restaurant.name %></div>
+        <% if reservation.user != nil %>
+        <p><%= reservation.size %> guests ON <%= reservation.when %></p>
+        <% else %>
+         <div class="display">No reservations yet!<br/>Why don't you make one?</div>
         <% end %>
       <% end %>
     </div>
@@ -27,10 +28,10 @@
     <h2><%= @user.name %>'s Reviews</h2>
     <div class="user_reviews_display">
       <% @user.reviews.each do |review| %>
-      <p><%= review.content %><br>
+      <div class="display"><%= review.restaurant.name %></div>
+      <div class="review_content"><%= review.content %></div>
         <% if review.user != nil %>
-        <em> by <%= review.user.email %></em>
-        Added on: <%= review.created_at %>
+        <p>Reviewed on <%= review.created_at %></p>
         <% end %>
       </p>
       <% end %>

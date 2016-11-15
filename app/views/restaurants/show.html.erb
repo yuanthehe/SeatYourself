@@ -1,3 +1,5 @@
+
+<div class="restaurants_list">
     <h1><%= @restaurant.name %></h1>
       <p><%= @restaurant.food_type %></p>
       <p><%= @restaurant.location %></p>
@@ -36,11 +38,11 @@
       <p>Please <%= link_to "log in", new_session_path %> to add a reservation.</p>
     <% end %>
 
-        <h3>Reviews</h3>
+        <div class="review">Reviews</div>
 
        <p>Reviews for <%= @restaurant.name %></p>
-
-        <% @restaurant.reviews.each do |review| %>
+     <div class="restaurant_review">
+        <h3><% @restaurant.reviews.each do |review| %></h3>
        <p>
          <%= review.content %>
        <br>
@@ -50,6 +52,7 @@
            <% end %>
        </p>
         <% end %>
+      </div>
 
   <% if current_user %>
   <h4>New Review</h4>
@@ -78,5 +81,3 @@
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
 <% end %>
-  </body>
-</html>

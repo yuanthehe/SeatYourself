@@ -9,6 +9,43 @@ h1.restaurant_header {
   text-shadow: 2px 2px #94180A;
 }
 
+.restaurants_list h3 a{
+  color: #94180A;
+  font-size: 22px;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 div.restaurants_list {
-  width: 60%;
+  padding-left: 40px;
+  color: white;
+  text-shadow: 1px 1px #333;
+  line-height: .5em;
+  font-size: 18px;
+}
+
+.review {
+  color: #94180A;
+  font-size: 20px;
+  line-height: .5em;
+  padding-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #94180A;
+}
+
+.restaurant_review {
+ float: left;
+ display: inline-block;
+ width: 30%;
+ height: 45%;
+ border-radius: 5px;
+ background-color: white;
+ opacity: 0.8;
+ margin: 20px;
+ overflow: scroll;
 }

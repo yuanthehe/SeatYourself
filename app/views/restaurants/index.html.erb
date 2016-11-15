@@ -3,10 +3,8 @@
 <div class="restaurants_list">
   <% @restaurants.each do |restaurant| %>
     <h3><%= link_to "#{restaurant.name}", "/restaurants/#{restaurant.id}" %></h3>
-    <ul>
-      <li><%= restaurant.food_type %></li>
-      <li><%= restaurant.location %></li>
-      <li><%= restaurant.phone %></li>
-    </ul>
+      <p><%= restaurant.food_type %></p>
+      <p><%= restaurant.location %></p>
+      <p><%= restaurant.phone %></p>
   <% end %>
 </div>

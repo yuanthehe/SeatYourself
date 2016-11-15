@@ -6,37 +6,90 @@ div#transparent_box {
   height: 100%;
   width: 100%;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: -1;
   position: absolute;
 }
 
-.user_profile h1 {
+h1.user_welcome {
   text-align: center;
-  padding-bottom: 25px;
+  color: white;
+  text-shadow: 2px 2px #94180A;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-img.profile_pic {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 5px;
+div.user_profile {
   float: left;
-  margin-left: 35%;
-  padding-right: 20px;
-}
-
-div.user_info {
-  clear: right;
-  padding-left: 50px;
+  display: inline-block;
+  width: 30%;
+  height: 45%;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.8;
+  margin: 20px;
+  overflow: scroll;
 }
 
 div.active_reservations {
-  clear: both;
-  display: block;
-  text-align: center;
-  padding-top: 25px;
+  float: left;
+  display: inline-block;
+  width: 30%;
+  height: 45%;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.8;
+  margin: 20px;
+  overflow: scroll;
 }
 
+div.active_reservations h2,
+div.user_reviews h2 {
+  text-align: center;
+
+}
+
+div.user_reviews {
+  float: left;
+  display: inline-block;
+  width: 30%;
+  height: 45%;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.8;
+  margin: 20px;
+  overflow: scroll;
+}
+
+div.user_info,
+div.reservations_table,
+div.user_reviews_display {
+  padding: 5px;
+  padding-left: 15px;
+  display: block;
+}
+
+div.user_info p {
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+div.display {
+  font-size: 25px;
+  color: #7476A1;
+  display: inline-block;
+  line-height: .08;
+}
+
+p.edit_link a {
+  float: right;
+  text-decoration: none;
+  padding-right: 15px;
+  color: #94180A;
+  font-size: 12px;
+}
+
+/*
 div.reservations_table {
   display: inline-block;
   width: 40%;
@@ -62,6 +115,10 @@ div.user_reviews_display {
   border-radius: 5px;
 
 }
+
+/*--------------------------------
+------ New User Sign Up ---------
+---------------------------------*/
 
 h1.signup_form {
   margin-bottom: 10px;

@@ -20,15 +20,16 @@
     <% end %>
     <header>
       <% if current_user %>
-        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        <div id="alert">Signed in as <%= current_user.email %>.</div>
+        <div class="btn btn-alt"><%= link_to "Log out", session_path("current"), :method => :delete %></div>
       <% else %>
         <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
       <% end %>
 
-      <a class = "nav_item" href='/restaurants'>Restaurants</a>
       <% if current_user %>
-      <%= link_to "Profile", "/users/#{session[:user_id]}" %>
+      <div class="btn btn-alt"><%= link_to "Profile", "/users/#{session[:user_id]}" %></div>
       <% end %>
+      <a class = "nav_item" href='/restaurants'>Restaurants</a>
 
 
       <div class="logo_style">

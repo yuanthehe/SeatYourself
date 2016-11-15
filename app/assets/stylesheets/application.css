@@ -33,7 +33,6 @@
     padding: 10px;
     display: inline-block;
     width: 130px;
-    clear: top;
     margin-left: 50px;
   }
 
@@ -51,17 +50,7 @@
     border-bottom: 1px black solid;
   }
 
-  a.nav_item {
-    color: white;
-    font-size: 20px;
-    text-align: right;
-    padding: 0px;
-    text-decoration: none;
-    display: inline-block;
-    /*position: relative;*/
-  }
-
-
+  a.nav_item,
   .btn a {
     border-radius: 5px;
     color: #a9b2b9;
@@ -79,17 +68,25 @@
     text-decoration: none;
 
   }
+
+  a.nav_item,
   .btn-alt a {
     border: 1px solid #fff;
     padding: 10px 30px;
   }
+
+  a.nav_item:hover,
   .btn-alt:hover a {
     background: #fff;
     color: #648880;
   }
 
+  a.nav_item {
+    margin-right: 40%;
+  }
+
   body {
-    background-image: url(tablefood.jpeg);
+    background-image: url(1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     /*background-position: fixed;*/
@@ -97,14 +94,14 @@
     width: 100%;
     z-index: -2;
     margin: 0px;
-    background-color: black;
+    background-color: #323232;
     line-height: 1;
     background-attachment: fixed;
 
   }
 
   footer div.open_space {
-    background-color: black;
+    background-color: #323232;
     height: 50px;
     width: 100%;
     bottom: 0;
@@ -118,4 +115,20 @@
   }
   .error_msg {
     padding-left: 40px;
+  }
+
+  div#alert {
+    position: relative;
+    background-color: #88B8BD;
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+  }
+
+  p#notice {
+    position: relative;
+    background-color: #88B8BD;
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
   }

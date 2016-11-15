@@ -3,7 +3,7 @@
 
 <div class="search_bar">
   <%= form_tag(restaurants_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+  <%= text_field_tag :search, params[:search], placeholder: "What would you like to eat?" %>
   <%= submit_tag "Search" %>
   <% end %>
 </div>

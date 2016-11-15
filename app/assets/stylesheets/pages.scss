@@ -1,3 +1,53 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h3.search_greeting {
+  color: white;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 100;
+  margin: 0px;
+  padding-bottom: 0px;
+  padding-top: 80px;
+  text-align: center;
+  text-shadow: 3px 3px #94180A;
+}
+
+p.sub_search_greeting {
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 100;
+  margin: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  text-shadow: 2px 2px #94180A;
+}
+
+.search_bar {
+  display: block;
+  text-align: center;
+}
+
+.search_bar form {
+  margin: auto;
+  padding: 125px;
+  padding-top: 30px;
+  display: inline-block;
+  width: 60%;
+  height: 30%;
+}
+
+.search_bar form input {
+  width: 80%;
+  height: 55px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+button.search_button {
+  height: 3em;
+  border-radius: 5px;
+  font-size: 20px;
+}

@@ -1,11 +1,6 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SeatYourself</title>
-  </head> -->
   <body>
-<<<<<<< HEAD
     <div id="transparent_box"></div>
     <div class="user_profile">
       <h1>Welcome <%= @user.name %>!</h1>
@@ -16,51 +11,34 @@
         <p>Phone: <%= @user.phone %></p>
         <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
       </div>
-    </div>
-    <div class="active_reservations">
-      <h2>Upcoming Reservations</h2>
+
+      <div class="active_reservations">
+        <h2>Upcoming Reservations</h2>
         <div class="reservations_table">
           <% @user.reservations.each do |reservation| %>
-            <p><%= reservation %></p>
-              <% if reservation.user != nil %>
-                <p>No reservations yet!</p>
-              <% end %>
+          <p><%= reservation %></p>
+            <% if reservation.user != nil %>
+            <em> by <%= reservation.when %></em>
+            Added on: <%= reservation.size %>
+            <% end %>
           <% end %>
+          <p>No Reservations Yet!</p>
         </div>
-    </div>
+      </div>
 
-    <div class="user_reviews">
+      <div class="user_reviews">
         <h3><%= @user.name %>'s Reviews</h3>
         <div class="user_reviews_display">
           <% @user.reviews.each do |review| %>
-        <p><%= review.comment %><br>
-=======
-<<<<<<< HEAD
-    <h1>Welcome<%= @user.name %>!</h1>
-    <p><%= link_to "Home", restaurants_path %> | <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
-=======
-    <h1>Welcome <%= @user.name %>!</h1>
-    <p><%= link_to "Home", restaurants_path %></p>
-    <p><%= link_to "Update Settings", "/users/#{@user.id}/edit" %></p>
-
-    <h3><%= @user.name %>'s Reviews</h3>
->>>>>>> master
-
-    <p>Reviews for <%= @user.name %></p>
-       <% @user.reviews.each do |review| %>
-    <p>
-       <%= review.content %>
-    <br>
->>>>>>> e9d5d82bb34e632ec17e0aba7290700d4f6933df
-        <% if review.user != nil %>
-          <em> by <%= review.user.email %></em>
-          Added on: <%= review.created_at %>
-        <% end %>
-        </p>
-        <% end %>
-
-          <% if current_user %>
+          <p><%= review.content %><br>
+            <% if review.user != nil %>
+            <em> by <%= review.user.email %></em>
+            Added on: <%= review.created_at %>
+            <% end %>
+          </p>
           <% end %>
+          <p>No Reviews Yet!</p>
+        </div>
 
-  <% if current_user %>
-  <% end %>
+  </body>
+</html>

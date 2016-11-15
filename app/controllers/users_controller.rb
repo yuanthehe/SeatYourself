@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to restaurants_url, notice: "Signed up!"
+      redirect_to user_url(@user), notice: "Signed up!"
     else
       render :new
     end
@@ -24,9 +24,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update_attributes(user_params)
-    redirect_to user_url(@user)
+      redirect_to user_url
     else
-    render :edit
+      render :edit
     end
   end
 

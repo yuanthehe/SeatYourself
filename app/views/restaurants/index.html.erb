@@ -1,36 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<h1>List of all Restaurants</h1>
+<h1 class="restaurant_header">Restaurants</h1>
 
-<% @restaurants.each do |restaurant| %>
-    <p><%= restaurant.name %><br>
-    <%= restaurant.location %>, <%= restaurant.phone %><br>
-    <%= restaurant.description %>, <%= restaurant.food_type %><br>
-    <%= restaurant.capacity %><br>
-    <p><%= link_to "Click to view", restaurants_path %></p>
-  <% end %>
-=======
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>SeatYourself</title>
-  </head>
-  <body>
->>>>>>> e9d5d82bb34e632ec17e0aba7290700d4f6933df
-
-<div class="restaurants">
-    <h1>Restaurants</h1>
-    <% @restaurants.each do |restaurant| %>
-      <p><%= link_to "#{restaurant.name}", "/restaurants/#{restaurant.id}" %></p>
-      <p><%= restaurant.food_type %></p
+<div class="restaurants_list">
+  <% @restaurants.each do |restaurant| %>
+    <h3><%= link_to "#{restaurant.name}", "/restaurants/#{restaurant.id}" %></h3>
+      <p><%= restaurant.food_type %></p>
       <p><%= restaurant.location %></p>
       <p><%= restaurant.phone %></p>
       <p><%= restaurant.description %></p>
-    <% end %>
-  </div>
-
-  </body>
-</html>
->>>>>>> master
+  <% end %>
+</div>

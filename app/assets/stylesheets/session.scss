@@ -1,3 +1,52 @@
 // Place all the styles related to the Session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.login_form h1{
+  text-shadow: 2px 2px #94180A;
+}
+
+div.login_form {
+  padding-left: 40px;
+  color: white;
+}
+
+.field {
+  font-style: 400px;
+  border-radius: 5px;
+  color: #a9b2b9;
+  line-height: 1;
+  margin-top: 10px;
+}
+.actions {
+ margin-top: 20px;
+ border-radius: 5px;
+ color: #a9b2b9;
+ cursor: pointer;
+ display: inline-block;
+ font-weight: 400px;
+ letter-spacing: .5px;
+ margin: 0;
+ text-transform: uppercase;
+}
+.cancel {
+ margin-top: 20px;
+ padding-top: 20px;
+ padding-left: 40px;
+}
+
+input {
+  height: 30px;
+  width: 30%;
+  font-size: 16px;
+
+
+}
+
+div.submit input {
+  height: 2em;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 140px;
+  margin-top: 10px;
+}

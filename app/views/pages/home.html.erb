@@ -1,5 +1,9 @@
+<h3 class="search_greeting"> Search by Food Type or Name</h3>
+<p class="sub_search_greeting">Easy search feature allows you to narrow down your choice</p>
+
 <div class="search_bar">
-  <form><input type="text" placeholder="What would you like to eat?" required>
-  <button type="Submit" class="search_button">Search</button>
-  </form>
+  <%= form_tag(restaurants_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+  <%= submit_tag "Search" %>
+  <% end %>
 </div>

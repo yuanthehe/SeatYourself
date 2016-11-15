@@ -1,44 +1,39 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <div id="transparent_box"></div>
-    <div class="user_profile">
-      <h1>Welcome <%= @user.name %>!</h1>
-      <img class="profile_pic" src="http://settingforone.com/wp-content/uploads/2015/02/Dollarphotoclub_66082123.jpg">
-      <div class="user_info">
-        <p>User: <%= @user.name %></p>
-        <p>Email: <%= @user.email %></p>
-        <p>Phone: <%= @user.phone %></p>
-        <p><%= link_to "Edit", "/users/#{@user.id}/edit" %></p>
-      </div>
+<!-- <div id="transparent_box"></div> -->
 
-      <div class="active_reservations">
-        <h2>Upcoming Reservations</h2>
-        <div class="reservations_table">
-          <% @user.reservations.each do |reservation| %>
-          <p><%= reservation %></p>
-            <% if reservation.user != nil %>
-            <em> by <%= reservation.when %></em>
-            Added on: <%= reservation.size %>
-            <% end %>
-          <% end %>
-          <p>No Reservations Yet!</p>
-        </div>
-      </div>
+<h1 class="user_welcome">Welcome <%= @user.name %>!</h1>
 
-      <div class="user_reviews">
-        <h3><%= @user.name %>'s Reviews</h3>
-        <div class="user_reviews_display">
-          <% @user.reviews.each do |review| %>
-          <p><%= review.content %><br>
-            <% if review.user != nil %>
-            <em> by <%= review.user.email %></em>
-            Added on: <%= review.created_at %>
-            <% end %>
-          </p>
-          <% end %>
-          <p>No Reviews Yet!</p>
-        </div>
+<div class="user_profile">
+  <p class="edit_link"><%= link_to "EDIT", "/users/#{@user.id}/edit" %></p>
+  <div class="user_info">
+    <p>User: <div class="display"><%= @user.name %></div></p>
+    <p>Email: <div class="display"><%= @user.email %></div></p>
+    <p>Phone: <div class="display"><%= @user.phone %></div></p>
+  </div>
+</div>
 
-  </body>
-</html>
+  <div class="active_reservations">
+    <h2>Upcoming Reservations</h2>
+    <div class="reservations_table">
+      <% @user.reservations.each do |reservation| %>
+      <p><%= reservation %></p>
+        <% if reservation.user != nil %>
+        <em> by <%= reservation.when %></em>
+        Added on: <%= reservation.size %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="user_reviews">
+    <h2><%= @user.name %>'s Reviews</h2>
+    <div class="user_reviews_display">
+      <% @user.reviews.each do |review| %>
+      <p><%= review.content %><br>
+        <% if review.user != nil %>
+        <em> by <%= review.user.email %></em>
+        Added on: <%= review.created_at %>
+        <% end %>
+      </p>
+      <% end %>
+    </div>
+  </div>

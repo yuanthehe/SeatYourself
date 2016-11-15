@@ -25,12 +25,13 @@ p.sub_search_greeting {
   text-shadow: 2px 2px #94180A;
 }
 
+
 .search_bar {
   display: block;
   text-align: center;
 }
 
-.search_bar form {
+form#search-form {
   margin: auto;
   padding: 125px;
   padding-top: 30px;
@@ -39,15 +40,20 @@ p.sub_search_greeting {
   height: 30%;
 }
 
-.search_bar form input {
+input#search {
   width: 80%;
   height: 55px;
   font-size: 20px;
   border-radius: 5px;
+  padding: 10px;
 }
 
-button.search_button {
-  height: 3em;
-  border-radius: 5px;
+form#search-form input {
+  width: 80%;
+  height: 55px;
   font-size: 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0px;
+
 }

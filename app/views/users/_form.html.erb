@@ -13,28 +13,28 @@
 <% end %>
 
     <div class="field">
-      <%= f.label :name %><br/>
-      <%= f.text_field :name %>
+      <% f.label :name %><br/>
+      <%= f.text_field :name, placeholder: "Enter your name here" %>
     </div>
 
     <div class="field">
-      <%= f.label :email %><br/>
-      <%= f.text_field :email %>
+      <% f.label :email %><br/>
+      <%= f.text_field :email, placeholder: "Enter your email here" %>
     </div>
 
     <div class="field">
-      <%= f.label :phone %><br/>
-      <%= f.text_field :phone %>
+      <% f.label :phone %><br/>
+      <%= f.text_field :phone, placeholder: "Your phone number, can I have it?" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %><br/>
-      <%= f.password_field :password %>
+      <% f.label :password %><br/>
+      <%= f.password_field :password, placeholder: "Enter a password" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br/>
-      <%= f.password_field :password_confirmation %>
+      <% f.label :password_confirmation %><br/>
+      <%= f.password_field :password_confirmation, placeholder: "What was that password again?" %>
     </div>
 
     <div class="submit">
